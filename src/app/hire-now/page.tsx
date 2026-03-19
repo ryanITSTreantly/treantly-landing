@@ -1,3 +1,4 @@
+// Landing page for Treantly
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";

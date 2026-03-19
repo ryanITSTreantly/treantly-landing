@@ -34,7 +34,7 @@ export default function Navbar() {
               width={160}
               height={40}
               className="transition-transform duration-300 group-hover:scale-105"
-              style={{ width: "auto" }}
+              style={{ width: "auto", height: "auto" }}
               priority
             />
           </Link>
