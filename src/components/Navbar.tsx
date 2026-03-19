@@ -33,7 +33,8 @@ export default function Navbar() {
               alt="Treantly"
               width={160}
               height={40}
-              className="h-8 sm:h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="transition-transform duration-300 group-hover:scale-105"
+              style={{ width: "auto", height: "2.5rem" }}
               priority
             />
           </Link>
