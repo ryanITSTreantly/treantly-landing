@@ -110,7 +110,6 @@ export default function Hero() {
                   height={400}
                   className="w-full h-auto object-contain rounded-2xl"
                   priority
-                  quality={85}
                 />
               </div>
 
