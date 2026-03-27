@@ -103,13 +103,13 @@ export default function Hero() {
               {/* Video call image container */}
               <div className="relative rounded-2xl overflow-hidden">
                 <Image
-                  src="/hero-video-call.png"
+                  src="/hero-video-call.avif"
                   alt="Victor from Treantly interviewing a VA candidate"
                   width={600}
                   height={400}
-                  className="w-full h-auto object-contain rounded-2xl"
+                  className="w-full h-auto object-cover rounded-2xl"
                   priority
-                  quality={85}
+                  quality={90}
                 />
               </div>
 
