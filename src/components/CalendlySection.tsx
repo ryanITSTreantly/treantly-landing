@@ -1,22 +1,28 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function CalendlySection() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
+    // Check if script already exists to prevent duplicate loading
+    const existingScript = document.querySelector(
+      'script[src="https://assets.calendly.com/assets/external/widget.js"]'
+    );
+    
+    if (existingScript) {
+      setIsLoaded(true);
+      return;
+    }
+
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
     script.async = true;
+    script.onload = () => setIsLoaded(true);
     document.body.appendChild(script);
 
-    return () => {
-      const existingScript = document.querySelector(
-        'script[src="https://assets.calendly.com/assets/external/widget.js"]'
-      );
-      if (existingScript) {
-        document.body.removeChild(existingScript);
-      }
-    };
+    // Don't remove script on cleanup - it causes issues with HMR/reloads
   }, []);
 
   return (
