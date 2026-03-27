@@ -3,11 +3,10 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative pt-32 sm:pt-36 lg:pt-40 pb-12 sm:pb-16 px-6 lg:px-8 bg-[var(--brand-cream)] overflow-hidden">
-      {/* Background decorations */}
+      {/* Background decorations - simplified for performance */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--brand-lime)] rounded-full blur-[100px] opacity-40 animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--brand-teal)] rounded-full blur-[120px] opacity-20 animate-float-delayed"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-[var(--brand-teal)]/5 to-transparent rounded-full"></div>
+        <div className="absolute top-20 left-10 w-48 h-48 bg-[var(--brand-lime)] rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute bottom-20 right-10 w-64 h-64 bg-[var(--brand-teal)] rounded-full blur-3xl opacity-15"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto">
@@ -95,9 +94,9 @@ export default function Hero() {
 
           {/* Right Column - Video Call Card + Features */}
           <div className="relative animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            {/* Decorative elements */}
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-[var(--brand-lime)] blob opacity-60 animate-float"></div>
-            <div className="absolute -bottom-10 -right-10 w-52 h-52 bg-[var(--brand-teal)] blob opacity-25 animate-float-delayed"></div>
+            {/* Decorative elements - simplified */}
+            <div className="absolute -top-10 -left-10 w-32 h-32 bg-[var(--brand-lime)] rounded-full blur-2xl opacity-40"></div>
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[var(--brand-teal)] rounded-full blur-2xl opacity-20"></div>
 
             {/* Video Call Card */}
             <div className="relative glass rounded-3xl p-3 sm:p-4 shadow-elevated max-w-lg mx-auto lg:mx-0 overflow-hidden">

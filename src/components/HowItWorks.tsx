@@ -70,10 +70,10 @@ export default function HowItWorks() {
 
   return (
     <section id="how-it-works" className="relative py-16 sm:py-20 lg:py-24 px-6 lg:px-8 bg-[var(--brand-cream)] overflow-hidden">
-      {/* Background decoration */}
+      {/* Background decoration - simplified for performance */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-0 w-72 h-72 bg-[var(--brand-lime)] rounded-full blur-[120px] opacity-30 -translate-y-1/2"></div>
-        <div className="absolute top-1/2 right-0 w-72 h-72 bg-[var(--brand-teal)] rounded-full blur-[120px] opacity-20 -translate-y-1/2"></div>
+        <div className="absolute top-1/2 left-0 w-48 h-48 bg-[var(--brand-lime)] rounded-full blur-3xl opacity-20 -translate-y-1/2"></div>
+        <div className="absolute top-1/2 right-0 w-48 h-48 bg-[var(--brand-teal)] rounded-full blur-3xl opacity-15 -translate-y-1/2"></div>
       </div>
 
       <div className="relative max-w-6xl mx-auto">

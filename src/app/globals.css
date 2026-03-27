@@ -261,7 +261,6 @@ body {
 /* Decorative elements */
 .blob {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  filter: blur(40px);
 }
 
 .grain {

@@ -49,10 +49,10 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="relative py-16 sm:py-20 lg:py-24 px-6 lg:px-8 bg-[var(--brand-cream)] overflow-hidden">
-      {/* Background decoration */}
+      {/* Background decoration - simplified for performance */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[var(--brand-lime)] rounded-full blur-[150px] opacity-30"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--brand-teal)] rounded-full blur-[150px] opacity-15"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[var(--brand-lime)] rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--brand-teal)] rounded-full blur-3xl opacity-10"></div>
       </div>
 
       <div className="relative max-w-3xl mx-auto">
