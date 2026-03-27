@@ -1,22 +1,28 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function CalendlySection() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
+    // Check if script already exists to prevent duplicate loading
+    const existingScript = document.querySelector(
+      'script[src="https://assets.calendly.com/assets/external/widget.js"]'
+    );
+    
+    if (existingScript) {
+      setIsLoaded(true);
+      return;
+    }
+
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
     script.async = true;
+    script.onload = () => setIsLoaded(true);
     document.body.appendChild(script);
 
-    return () => {
-      const existingScript = document.querySelector(
-        'script[src="https://assets.calendly.com/assets/external/widget.js"]'
-      );
-      if (existingScript) {
-        document.body.removeChild(existingScript);
-      }
-    };
+    // Don't remove script on cleanup - it causes issues with HMR/reloads
   }, []);
 
   return (
@@ -24,9 +30,9 @@ export default function CalendlySection() {
       id="book-call"
       className="relative py-16 sm:py-20 lg:py-24 px-6 lg:px-8 bg-[var(--brand-beige)] overflow-hidden"
     >
-      {/* Background decoration */}
+      {/* Background decoration - simplified for performance */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[var(--brand-teal)] rounded-full blur-[200px] opacity-10"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[var(--brand-teal)] rounded-full blur-3xl opacity-10"></div>
       </div>
 
       <div className="relative max-w-5xl mx-auto">

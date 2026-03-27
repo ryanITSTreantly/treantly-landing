@@ -165,17 +165,14 @@ export default function Testimonials() {
                       }}
                       className="absolute inset-0 flex items-center justify-center group/play"
                     >
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-white/30 rounded-full animate-ping"></div>
-                        <div className="relative w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center shadow-xl group-hover/play:scale-110 transition-transform duration-300">
-                          <svg
-                            className="w-6 h-6 sm:w-7 sm:h-7 text-[var(--brand-green)] ml-1"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
-                        </div>
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center shadow-xl group-hover/play:scale-110 transition-transform duration-300">
+                        <svg
+                          className="w-6 h-6 sm:w-7 sm:h-7 text-[var(--brand-green)] ml-1"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
                       </div>
                     </button>
                   )}
